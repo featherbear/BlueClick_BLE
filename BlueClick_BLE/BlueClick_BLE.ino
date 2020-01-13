@@ -79,15 +79,6 @@ void setupBLE() {
   // Serial.println("Ready to receive BLE connections");
 }
 
-
-void IRAM_ATTR SEND_A() {
-  sendNote(NOTE_A);
-}
-
-void IRAM_ATTR SEND_B() {
-  sendNote(NOTE_B);
-}
-
 /*
    Send note at default velocity 127
 */
@@ -129,6 +120,13 @@ void IRAM_ATTR sendNote(uint8_t note, uint8_t velocity) {
 
 }
 
+void IRAM_ATTR SEND_A() {
+  sendNote(NOTE_A);
+}
+
+void IRAM_ATTR SEND_B() {
+  sendNote(NOTE_B);
+}
 
 void setup() {
   Serial.begin(115200);
